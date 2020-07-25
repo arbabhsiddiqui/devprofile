@@ -1,0 +1,44 @@
+@import "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+// fonts
+$header-font: "Poppins", sans-serif;
+$body-font: "Poppins", sans-serif;
+
+// colors
+$base: #e7eafb;
+$white: #ffffff;
+$black: #000000;
+$accent: #99edcc;
+$dark: #333;
+$primary: #4286f4;
+$primary-dark: darken($primary, 25);
+$secondary: rgb(194, 146, 146);
+
+// import component
+@import "../component/button";
+// add color,typography,grid
+@import "./typography";
+@import "./color";
+@import "./grid";
+
+// define media query mixin for development
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

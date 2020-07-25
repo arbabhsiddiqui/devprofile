@@ -1,0 +1,20 @@
+@mixin body-font {
+  font-family: $body-font;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 1%;
+}
+
+@mixin header-font {
+  font-family: $header-font;
+  font-weight: bold;
+  letter-spacing: 1%;
+}
+
+$textstyle: ("center", "left", "right", "justify");
+
+@each $text in $textstyle {
+  .text-#{$text} {
+    text-align: #{$text};
+  }
+}

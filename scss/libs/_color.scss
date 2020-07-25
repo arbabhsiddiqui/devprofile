@@ -1,0 +1,41 @@
+// function for set text color
+
+@function set-text-color($color) {
+  @if (lightness($color) >50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// color text
+
+$colorpacks: (
+  "primary": $primary,
+  "accent": $accent,
+  "secondary": $secondary,
+  "light": "#fff",
+  "dark": "#000",
+);
+
+@each $color, $value in $colorpacks {
+  .bg-#{$color} {
+    background: #{$value};
+  }
+
+  .btn-#{$color} {
+    background: #{$value} !important;
+    border: 1px solid #{$value} !important;
+    color: rgb(27, 27, 27) !important;
+
+    &:hover {
+      color: #{$value} !important;
+      background: rgb(27, 27, 27) !important;
+      border: 1px solid #{$value};
+    }
+  }
+
+  .text-#{$color} {
+    color: #{$value};
+  }
+}

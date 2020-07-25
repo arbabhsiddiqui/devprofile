@@ -1,0 +1,18 @@
+body {
+  background: $base;
+  color: set-text-color($base);
+  @include body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include header-font;
+}
+
+.round {
+  border-radius: 5px !important;
+}
